@@ -1,0 +1,190 @@
+@keyframes fade-in-and-out {
+  0% {
+    opacity: 0;
+  }
+  
+  25%,
+  75% {
+    opacity: .5;
+  }
+  
+  50% {
+    opacity: .75;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes point {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-family: PT Sans,Helvetica,Arial,sans-serif;
+  font-smooth: auto;
+  margin: 0;
+  padding: 1em;
+}
+
+main,
+header,
+section,
+button {
+  border: 2px solid #000;
+  border-radius: 4px;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+
+main {
+  box-sizing: border-box;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+}
+
+header {
+  height: 10vh;
+  flex-direction: column;
+  margin-bottom: .5em;
+}
+
+section {
+  height: 12vh;
+  margin-bottom: .5em;
+  justify-content: space-around;
+  display: flex;
+}
+
+span {
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+}
+
+button {
+  background-color: transparent;
+  padding: .5em 2em;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 .5em;
+
+  &:hover {
+    opacity: .6;
+  }
+}
+
+label {
+  font-weight: 600;
+  margin: .2em 0;
+  position: relative;
+  width: 80%;
+  text-align: center;
+
+  &:before,
+  &:after {
+    position: absolute;
+  }
+
+  &:before {
+    content: 'S';
+    left: 0;
+  }
+
+  &:after {
+    content: 'F';
+    right: 0;
+  }
+}
+
+#point {
+  font-size: 2.5em;
+}
+
+#point-text {
+  margin-left: .5em;
+}
+
+#added {
+  flex-direction: column;
+  min-width: 20px;
+}
+
+#added .inner {
+  display: none;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+#added .inner.show {
+  display: block;
+  opacity: 1;
+}
+
+.point-handler {
+  color: #000;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#speed {
+  overflow: hidden;
+  width: 70%;
+  -webkit-appearance: none;
+  background-color: #9a905d;
+  border-radius: 8px;
+  border: 2px solid #000;
+  opacity: .75;
+  padding: 0 1em;
+}
+
+#speed::-webkit-slider-runnable-track {
+  height: 10px;
+  -webkit-appearance: none;
+  margin-top: -1px;
+}
+
+#speed::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  cursor: pointer;
+  background-color: #000;
+}
+
+.range {
+  flex-basis: 50%;
+  flex-direction: column;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.point-area {
+  flex-basis: 25%;
+  padding-left: .5em;
+}
+
+.start {
+  flex-basis: 25%;
+}

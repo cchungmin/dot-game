@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dot Shooting!</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header class="flex">
+    <h2>Start Shooting Dots!</h2>
+    <h3>Smaller dot, Higher point.</h3>
+  </header>
+  <section>
+    <div class="flex point-area">
+      <div class="flex" id="point"></div>
+      <div class="flex" id="point-text">
+        pt
+      </div>
+      <div class="flex" id="added"></div>
+    </div>
+    <div class="flex range">
+      <label for="speed">Speed</label>
+      <input type="range" id="speed" name="speed" min="10" max="100">
+    </div>
+    <div class="flex start">
+      <button id="start-button">Start</button>
+    </div>
+  </section>
+  <main></main>
+  <script src="/index.js"></script>
+</body>
+</html>
